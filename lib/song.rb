@@ -25,4 +25,8 @@ class Song
   def self.artists
     @@artists.unique
   end
+
+  def self.genre_count
+    genre.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }
+  end
 end
