@@ -33,6 +33,6 @@ class Song
   end
 
   def self.artist_count
-    @@artists.group_by{ |v| v }.flat_map{ |k, v| {k: v.count} }
+    @@artists.group_by{ |v| v }.flat_map{ |k, v| {k => v.count} }
   end
 end
