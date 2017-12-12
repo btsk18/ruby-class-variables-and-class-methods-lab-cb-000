@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
 
   attr_accessor :name, :artist, :genre
@@ -27,6 +29,7 @@ class Song
   end
 
   def self.genre_count
+    
     self.genres.group_by{ |v| v }.flat_map{ |k, v| [k, v.count] }
   end
 
