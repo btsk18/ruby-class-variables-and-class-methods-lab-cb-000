@@ -27,10 +27,10 @@ class Song
   end
 
   def self.genre_count
-    self.genres.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }
+    self.genres.group_by{ |v| v }.flat_map{ |k, v| [k, v.count] }
   end
 
   def self.artist_count
-    self.artists.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }
+    self.artists.group_by{ |v| v }.flat_map{ |k, v| [k, v.count] }
   end
 end
