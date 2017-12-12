@@ -21,7 +21,6 @@ class Song
   end
 
   def self.genres
-    binding.pry
     return @@genres.uniq
   end
 
@@ -30,7 +29,6 @@ class Song
   end
 
   def self.genre_count
-    binding.pry
     self.genres.group_by{ |v| v }.flat_map{ |k, v| [k, v.count] }
   end
 
